@@ -24,8 +24,8 @@ def prime_number():
     
     #Determining the factors of numbr then append to the fktr list
     for i in range (1,numbr+1):
-            if numbr%i==0:
-                fktr.append(i)
+        if numbr%i==0:
+            fktr.append(i)
     
     #Determining the output based on the value of is_prime boolean
     if is_prime==False:
