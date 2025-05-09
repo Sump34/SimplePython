@@ -12,15 +12,14 @@ def prime_number():
     square = math.ceil(math.sqrt(numbr))
     fktr = []
     is_prime = True
-    for fac in range(2,square+1):
-        if numbr/fac==0:
-            is_prime=True
-            break
-        elif numbr==fac:
-            is_prime=True
-        elif numbr%fac==0:
-            is_prime=False
-            break
+    while numbr!=0 or numbr!=1:
+        for fac in range(2,square+1):
+            for fac in range(2,square+1):
+                if numbr==fac:
+                    is_prime=True
+                elif numbr%fac==0:
+                    is_prime=False
+                    break
     
     #Determining the factors of numbr then append to the fktr list
     for i in range (1,numbr+1):
@@ -36,14 +35,16 @@ def prime_number():
             print (numbr," is not a prime number")
             print ("Factors of ",numbr," are : ",fktr)
     else:
+        print (numbr," is a prime number")
+        print ("Factors of ",numbr," are : ",fktr)
+
+    #Determining the output if the value numbr integer is binary
+    while numbr==0 or numbr==1:
         if numbr==0:
             print (numbr," has infinite factors")
-        elif numbr==1:
-            print (numbr," has only one factor")
         else:
-            print (numbr," is a prime number")
-            print ("Factors of ",numbr," are : ",fktr)
-
+            print (numbr," has only one factor")
+    
 #Displaying the menu function
 print()
 menu ()
