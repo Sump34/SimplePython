@@ -9,42 +9,43 @@ def menu ():
 
 #Defining the prime_number function
 def prime_number():
-    numbr = int(input("Enter a number : "))
-    square = math.ceil(math.sqrt(numbr))
-    fktr = []
+    mltpl = int(input("Enter a number : "))
+    square = math.ceil(math.sqrt(mltpl))
+    fctr = []
     is_prime = True
-    if numbr==0 or numbr==1:
+    
+    #Determining the condition of the multiple based on mltpl integer
+    if mltpl<2:
         is_prime=False
     else:
         for fac in range(2,square+1):
-            if numbr==fac:
+            if mltpl==fac:
                 is_prime=True
-            elif numbr%fac==0:
+            elif mltpl%fac==0:
                 is_prime=False
                 break
     
-    #Determining the factors of numbr then append to the fktr list
-    for i in range (1,numbr+1):
-        if numbr%i==0:
-            fktr.append(i)
+    #Determining the factors of mltpl then appending to the fctr list
+    if mltpl>1 :
+        for dvsr in range (1,mltpl+1):
+            if mltpl%dvsr==0:
+                fctr.append(dvsr)
     
     #Determining the output based on the value of is_prime boolean
     if is_prime==False:
-        if numbr==0:
-            print (numbr," has many factors")
-        elif numbr==1:
-            print (numbr," has only one factor")
-        elif math.sqrt(numbr)%1==0:
-            print (numbr," is a square number of ",int(math.sqrt(numbr)))
-            print ("Factors of ",numbr," are : ",fktr)
+        if mltpl==0:
+            print (mltpl," has many factors")
+        elif mltpl==1:
+            print (mltpl," has only one factor")
+        elif math.sqrt(mltpl)%1==0:
+            print (mltpl," is a square number of ",int(math.sqrt(mltpl)))
+            print ("fctrs of ",mltpl," are : ",fctr)
         else:
-            print (numbr," is not a prime number")
-            print ("Factors of ",numbr," are : ",fktr)
+            print (mltpl," is not a prime number")
+            print ("fctrs of ",mltpl," are : ",fctr)
     else:
-        print (numbr," is a prime number")
-        print ("Factors of ",numbr," are : ",fktr)
-
-    #Determining the output if the value numbr integer is binary
+        print (mltpl," is a prime number")
+        print ("fctrs of ",mltpl," are : ",fctr)
     
 #Displaying the menu function
 print()
