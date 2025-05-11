@@ -39,13 +39,13 @@ def prime_number():
             print (mltpl," has only one factor")
         elif math.sqrt(mltpl)%1==0:
             print (mltpl," is a square number of ",int(math.sqrt(mltpl)))
-            print ("fctrs of ",mltpl," are : ",fctr)
+            print ("Factors of ",mltpl," are : ",fctr)
         else:
             print (mltpl," is not a prime number")
-            print ("fctrs of ",mltpl," are : ",fctr)
+            print ("Factors of ",mltpl," are : ",fctr)
     else:
         print (mltpl," is a prime number")
-        print ("fctrs of ",mltpl," are : ",fctr)
+        print ("Factors of ",mltpl," are : ",fctr)
     
 #Displaying the menu function
 print()
