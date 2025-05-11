@@ -1,4 +1,6 @@
+#Importing the math library
 import math
+
 #Defining the menu function
 def menu ():
     print ("Start the program? [0/1]")
@@ -11,14 +13,15 @@ def prime_number():
     square = math.ceil(math.sqrt(numbr))
     fktr = []
     is_prime = True
-    for fac in range(2,square+1):
-        if numbr==fac:
-            is_prime=True
-        elif numbr%fac==0:
-            is_prime=False
-            break
     if numbr==0 or numbr==1:
         is_prime=False
+    else:
+        for fac in range(2,square+1):
+            if numbr==fac:
+                is_prime=True
+            elif numbr%fac==0:
+                is_prime=False
+                break
     
     #Determining the factors of numbr then append to the fktr list
     for i in range (1,numbr+1):
