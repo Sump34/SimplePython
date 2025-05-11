@@ -7,8 +7,7 @@ def menu ():
 
 #Defining the prime_number function
 def prime_number():
-    inp = input("Enter a number : ")
-    numbr = int(inp)
+    numbr = int(input("Enter a number : "))
     square = math.ceil(math.sqrt(numbr))
     fktr = []
     is_prime = True
