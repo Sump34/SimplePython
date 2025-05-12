@@ -41,7 +41,7 @@ def prime_number():
             print (mltpl," is a square number of ",int(math.sqrt(mltpl)))
             print ("Factors of ",mltpl," are : ",fctr)
         else:
-            print (mltpl," is not a prime number")
+            print (mltpl," is a composite number")
             print ("Factors of ",mltpl," are : ",fctr)
     else:
         print (mltpl," is a prime number")
