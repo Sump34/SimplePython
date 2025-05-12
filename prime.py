@@ -36,6 +36,7 @@ def prime_number():
         if mltpl<2:
             print (mltpl," is a binary number")
         elif math.sqrt(mltpl)%1==0:
+            print (mltpl," is a composite number")
             print (mltpl," is a square number of ",int(math.sqrt(mltpl)))
             print ("Factors of ",mltpl," are : ",fctr)
         else:
