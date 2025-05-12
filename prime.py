@@ -33,10 +33,8 @@ def prime_number():
     
     #Determining the output based on the value of is_prime boolean
     if is_prime==False:
-        if mltpl==0:
-            print (mltpl," has many factors")
-        elif mltpl==1:
-            print (mltpl," has only one factor")
+        if mltpl<2:
+            print (mltpl," is a binary number")
         elif math.sqrt(mltpl)%1==0:
             print (mltpl," is a square number of ",int(math.sqrt(mltpl)))
             print ("Factors of ",mltpl," are : ",fctr)
